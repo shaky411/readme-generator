@@ -3,52 +3,30 @@ import inquirer from 'inquirer';
 import fs from 'fs/promises'
 
 
-let {first_name, last_name} = await inquirer
+let {title, subtitle} = await inquirer
     .prompt([
         {
             type: 'input',
-            name: 'first_name',
-            message: "What's your first name",
+            name: 'title',
+            message: "What's the readme title?",
         },
         {
             type: 'input',
-            name: 'last_name',
-            message: "What's your last name",
+            name: 'subtitle',
+            message: "What's the subtitle",
             default() {
-                return 'Doe';
+                return 'test';
             },
         },
     ])
 
-console.log(first_name, last_name);
 
-let htmlDoc = `
+let readmeData = `
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>${first_name} ${last_name}!</h1>
-</body>
-</html>
+# ${title}
+
+## ${subtitle}
 
 `
 
-await fs.writeFile('README.md', htmlDoc)
-
-
-
-
-
-
-
-
-
-
-
-fs.writeFile
+await fs.writeFile('README.md', readmeData);
