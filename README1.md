@@ -1,10 +1,10 @@
 
 
-# tst 
+# Weather Dashboard 
 
 ## Description 
 
-test
+I have been tasked with creating a weather dashboard app
 
 ![licence](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
 
@@ -25,13 +25,13 @@ test
 
 
 ## Installation 
-test
+To run, simply open the application URL in your browser.
 
 ## Usage
 
 _Usage instructions:_
 
-test
+N/A
 
 _please remember to add screen captures of your application!_
 
@@ -39,24 +39,24 @@ _please remember to add screen captures of your application!_
 
 _Details for testing if applicable:_
 
-test
+N/A
 
 # Questions
 
-
+If you would like to know more about my app, reach out via my GitHub profile or email me.
 
 ## _Contact:_
 
-GitHub Profile: [test](https://github.com/test)
+GitHub Profile: [shaky411](https://github.com/shaky411)
 
-Email: [teset](mailto:teset)
+Email: [shaky411@googlemail.com](mailto:shaky411@googlemail.com)
 
-# Licence
+## Licence
 
 * _This application has the **Apache 2.0 License.**_
 For more info, please go to the [licence description](https://www.apache.org/licenses/LICENSE-2.0)
 
-## Contributors
+# Contributors
 
-teset
+N/A
 
