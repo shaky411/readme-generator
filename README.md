@@ -1,39 +1,46 @@
-# Weather Dashboard
+# Professional README Generator
+
+![licence](https://img.shields.io/badge/licence-MIT-yellow.svg)
 
 ## The Task:
 
-* I have been tasked with creating a simple weather app
+* I have been tasked with creating a professional README generator. The application will run in the terminal.
 
-* This app features dynamically updated HTML and CSS.
+* This app features dynamically updated information.
 
 **Instructions**
 
-* Create an app that meets the following criteria:
+* Create a README generator that displays the following sections:
 
-    * Display the current weather for the searched location
- 
-    * Display a summary of the weather for the next five days
- 
-    * Save recently searched cities and create buttons to easily access previous searches
- 
-    * Utilise local storage to save recent searches
+    * The title of my project 
+    * Sections entitled:
+      * Description 
+      * Table of Contents 
+      * Installation 
+      * Usage 
+      * License 
+      * Contributing 
+      * Tests 
+      * Questions
 
 ## Installation
 
-To run, simply open the following link in your web browser and type a city in the search field.
+To application will be invoked by using the following command:
 
-You can access the weather app through the following link:
-
-https://shaky411.github.io/Weather-Dashboard
+```bash
+node index.mjs
+```
 
 ## Usage
 
 
 ## Screenshots
 
-![Alt text](assets/images/SCR-20230131-cjp.png) 
+![Alt text](assets/images/SCR-20230219-uqb.png)
 
-![Alt text](assets/images/SCR-20230131-bbj.png)
+## Application Video Walkthrough
+
+https://www.loom.com/share/ecf476cfa0564139a7836612f663cd10
 
 ## Credits
 
@@ -41,4 +48,5 @@ N/A
 
 ## License
 
-Please refer to the license in the repo.
+* _This application has the MIT Licence_
+For more info, please go to the [licence description](https://opensource.org/license/mit/)
