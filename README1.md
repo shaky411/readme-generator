@@ -1,12 +1,12 @@
 
 
-# sdfsdf 
+# tst 
 
 ## Description 
 
-sdfsdf
+test
 
-![licence](https://img.shields.io/badge/licence-MIT-yellow.svg)
+![licence](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
 
 ## Table of Contents
 
@@ -20,34 +20,43 @@ sdfsdf
 
 * [Licence](#licence)
 
+* [Contributors](#contributors)
+
 
 
 ## Installation 
-sdgsd
+test
 
 ## Usage
 
 _Usage instructions:_
 
-ghfgh
+test
+
+_please remember to add screen captures of your application!_
 
 ## Tests
 
 _Details for testing if applicable:_
 
-fgh
+test
 
 # Questions
 
-gfgh
 
-_Contact:_
 
-GitHub: [fghfg](https://github.com/fghfg)
+## _Contact:_
 
-Email: [hfghf](mailto:hfghf)
+GitHub Profile: [test](https://github.com/test)
+
+Email: [teset](mailto:teset)
 
 # Licence
 
-* _This application has the **MIT licence.**_
-For more info, please go to the [licence description](https://opensource.org/licence/mit/)
+* _This application has the **Apache 2.0 License.**_
+For more info, please go to the [licence description](https://www.apache.org/licenses/LICENSE-2.0)
+
+## Contributors
+
+teset
+

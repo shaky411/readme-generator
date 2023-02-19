@@ -4,7 +4,17 @@ import fs from 'fs/promises'
 // import Choices from 'inquirer/lib/objects/choices';
 
 
-let {title, description, installation, instructions, licence, contributing, tests, questions, email, username} = await inquirer
+let {title, 
+    description, 
+    installation, 
+    instructions, 
+    licence, 
+    contributing, 
+    tests, 
+    questions, 
+    email, 
+    username} = await inquirer
+
     .prompt([
         {
             type: 'input',
@@ -68,7 +78,12 @@ let {title, description, installation, instructions, licence, contributing, test
             {
                 type: 'input',
                 name: 'tests',
-                message: "Please gice details for testing",
+                message: "Please give details for testing",
+            },
+            {
+                type: 'input',
+                name: 'contributing',
+                message: "Please explain contribution details",
             }
             
         
@@ -128,6 +143,8 @@ ${description}
 
 * [Licence](#licence)
 
+* [Contributors](#contributors)
+
 
 
 ## Installation 
@@ -139,6 +156,8 @@ _Usage instructions:_
 
 ${instructions}
 
+_please remember to add screen captures of your application!_
+
 ## Tests
 
 _Details for testing if applicable:_
@@ -149,32 +168,23 @@ ${tests}
 
 ${questions}
 
-_Contact:_
+## _Contact:_
 
-GitHub: [${username}](https://github.com/${username})
+GitHub Profile: [${username}](https://github.com/${username})
 
 Email: [${email}](mailto:${email})
 
-# Licence
+## Licence
 
 * _This application has the **${licence}.**_
 For more info, please go to the [licence description](${licenceURL})
+
+# Contributors
+
+${contributing}
+
 `
 
 
 
 await fs.writeFile('README1.md', readmeData);
-
-
-
-
-
-
-// {
-//     type: 'input',
-//     name: 'description',
-//     message: "Please give the description of your project",
-//     default() {
-//         return;
-//     },
-// },
