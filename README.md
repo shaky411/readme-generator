@@ -25,7 +25,7 @@
 
 ## Installation
 
-To application will be invoked by using the following command:
+The application will be invoked by using the following command:
 
 ```bash
 node index.mjs
