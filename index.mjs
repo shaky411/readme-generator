@@ -4,18 +4,19 @@ import fs from 'fs/promises'
 // import Choices from 'inquirer/lib/objects/choices';
 
 
-let {title, description, installation, instructions, license, contributing, tests, questions} = await inquirer
+let {title, description, installation, instructions, licence, contributing, tests, questions, email, username} = await inquirer
     .prompt([
         {
             type: 'input',
             name: 'title',
             message: "Please enter your project title (README.md Title)",
 
-            // This checks for use input
+            // This checks for user input
             validate: nameInput => {
                 if (nameInput) {
                     return true;
                 } else {
+                    console.log("please enter a title")
                     return false;
                 }
             }
@@ -34,68 +35,74 @@ let {title, description, installation, instructions, license, contributing, test
             }
         },
         {
-            type: 'confirm',
-            name: 'confirmInstallationProcess',
-            message: 'Would you like to add an installation process?'
-        },
-        {
             type: 'input',
             name: 'installation',
             message: "Please detail the installation process",
-            when: ( {confirmInstallationProcess} ) => {
-                if (confirmInstallationProcess) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-        },
-        {
-            type: 'confirm',
-            name: 'confirmUsageInstructions',
-            message: 'Would you like to add usage instructions?'
         },
         {
             type: 'input',
             name: 'instructions',
             message: "Please give installation instructions",
-            when: ( {confirmUsageInstructions} ) => {
-                if (confirmUsageInstructions) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
         },
         {
             type: 'list',
-            name: 'license',
-            message: 'Please choose license type.',
-            choices: ['MIT License', 'Mozilla Public License 2.0', 'Eclipse Public License 1.0']
+            name: 'licence',
+            message: 'Please choose licence type.',
+            choices: ['MIT licence', 'Mozilla Public licence 2.0', 'Eclipse Public licence 1.0', 'Apache 2.0 License', 'SIL Open Font License 1.1']
             },
+            {
+                type: 'input',
+                name: 'username',
+                message: "Please enter your GitHub username",
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: "Please enter your email address)",
+            },
+            {
+                type: 'input',
+                name: 'questions',
+                message: "Please list instructions for contact",
+            },
+            {
+                type: 'input',
+                name: 'tests',
+                message: "Please gice details for testing",
+            }
             
+        
+    ]);
 
-    ])
+// licence info based on selection
 
-// License info based on selection
+let licenceURL = '';
+let licenceImg = '';
+// let mozillaBadge = 'https://img.shields.io/badge/licence-MPL_2.0-brightgreen.svg';
 
-let licenseURL = '';
-let licenseImg = '';
-// let mozillaBadge = 'https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg';
-
-if (license === 'MIT License') {
-    licenseURL = 'https://opensource.org/license/mit/'
-    licenseImg = 'https://img.shields.io/badge/License-MIT-yellow.svg'
+if (licence === 'MIT licence') {
+    licenceURL = 'https://opensource.org/licence/mit/'
+    licenceImg = 'https://img.shields.io/badge/licence-MIT-yellow.svg'
     
 }
-if (license === 'Mozilla Public License 2.0') {
-    licenseURL = 'https://www.mozilla.org/en-US/MPL/2.0/'
-    licenseImg = 'https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg'
+if (licence === 'Mozilla Public licence 2.0') {
+    licenceURL = 'https://www.mozilla.org/en-US/MPL/2.0/'
+    licenceImg = 'https://img.shields.io/badge/licence-MPL_2.0-brightgreen.svg'
 }
 
-if (license === 'Eclipse Public License 1.0') {
-    licenseURL = 'https://www.eclipse.org/legal/epl-v10.html'
-    licenseImg = 'https://img.shields.io/badge/License-EPL_1.0-red.svg'
+if (licence === 'Eclipse Public licence 1.0') {
+    licenceURL = 'https://www.eclipse.org/legal/epl-v10.html'
+    licenceImg = 'https://img.shields.io/badge/licence-EPL_1.0-red.svg'
+}
+
+if (licence === 'Apache 2.0 License') {
+    licenceURL = 'https://www.apache.org/licenses/LICENSE-2.0'
+    licenceImg = 'https://img.shields.io/badge/License-Apache_2.0-blue.svg'
+}
+
+if (licence === 'SIL Open Font License 1.1') {
+    licenceURL = 'https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL#5667e9e4'
+    licenceImg = 'https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg'
 }
 
 
@@ -107,7 +114,7 @@ let readmeData = `
 
 ${description}
 
-![License](${licenseImg})
+![licence](${licenceImg})
 
 ## Table of Contents
 
@@ -115,7 +122,12 @@ ${description}
 
 * [Installation](#installation)
 
+* [Tests](#tests)
+
+* [Questions](#questions)
+
 * [Licence](#licence)
+
 
 
 ## Installation 
@@ -127,95 +139,28 @@ _Usage instructions:_
 
 ${instructions}
 
-b
+## Tests
 
+_Details for testing if applicable:_
 
-b
+${tests}
 
+# Questions
 
-b
+${questions}
 
+_Contact:_
 
-b
+GitHub: [${username}](https://github.com/${username})
 
-
-b
-
-
-b
-
-
-b
-
-
-b
-
-
-b
-
-
-b
-
-
-b
-
-
-b
-b
-
-
-b
-
-
-b
-
-
-b
-
-
-b
-
-
-b
-
-
-b
-
-
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
-b
+Email: [${email}](mailto:${email})
 
 # Licence
 
-* _This application has the **${license}.**_
-For more info, please go to the [license description](${licenseURL})
+* _This application has the **${licence}.**_
+For more info, please go to the [licence description](${licenceURL})
 `
+
 
 
 await fs.writeFile('README1.md', readmeData);
