@@ -10,11 +10,13 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-    
+    fs.writeFile(fileName, data);
 }
 
+const createFile = util.promisify(writeToFile);
+
 // function to initialize program
-function init() {
+async function init() {
 
 }
 
