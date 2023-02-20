@@ -8,6 +8,19 @@
 
 * This app features dynamically updated information.
 
+<br>
+
+**Table of Contents:**
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Screenshots](#screenshots)
+* [Application Video Walthrough](#application-video-walkthrough)
+* [Credits](#credits)
+* [License](#license)
+
+<br>
+
 **Instructions**
 
 * Create a README generator that displays the following sections:
@@ -23,7 +36,11 @@
       * Tests 
       * Questions
 
+<br>
+
 ## Installation
+
+<br>
 
 The application will be invoked by using the following command:
 
@@ -31,24 +48,35 @@ The application will be invoked by using the following command:
 node index.mjs
 ```
 
-## Usage
+<br>
 
-## Sample README.md
+# Usage
+
+### Sample README.md
 
 [VIEW Sample README](Sample%20README/README1.md)
 
+<br>
 
 ## Screenshots
 
+<br>
+
 ![Alt text](assets/images/SCR-20230219-uqb.png)
+
+<br>
 
 ## Application Video Walkthrough
 
 https://www.loom.com/share/ecf476cfa0564139a7836612f663cd10
 
+<br>
+
 ## Credits
 
 N/A
+
+<br>
 
 ## License
 
